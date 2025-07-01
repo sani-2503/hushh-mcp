@@ -28,6 +28,8 @@ function sendSSE(res, payload) {
 // Sample MCP metadata
 const MCP_VERSION = "2025-06-18";
 const SERVER_INFO = { name: "sample-mcp-node", version: "1.0.0" };
+// Centralized base for Hushh API
+const HUSHH_BASE = "https://hushh-api-53407187172.us-central1.run.app";
 const TOOLS = [
   {
     name: "echo",
@@ -983,13 +985,3 @@ app.post('/sse', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`MCP server listening at http://localhost:${PORT}`);
 }); 
-// chore: backdated edit for 2025-07-01
-// chore: backdated edit for 2025-07-02
-// chore: backdated edit for 2025-07-03
-// chore: backdated edit for 2025-07-04
-// chore: backdated edit for 2025-07-05
-// chore: backdated edit for 2025-07-06
-// chore: backdated edit for 2025-07-07
-// chore: backdated edit for 2025-07-08
-// chore: backdated edit for 2025-07-09
-// chore: backdated edit for 2025-07-10
