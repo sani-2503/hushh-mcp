@@ -437,7 +437,7 @@ app.post('/sse', async (req, res) => {
       if (params.name === 'generate_token') {
         try {
           const mail = params.arguments?.mail || 'i-sanipatel@hushh.ai';
-          const url = `https://hushh-api-53407187172.us-central1.run.app/generateapikey?mail=${encodeURIComponent(mail)}`;
+          const url = `${HUSHH_BASE}/generateapikey?mail=${encodeURIComponent(mail)}`;
           const tokenRes = await fetch(url, {
             method: 'POST',
             headers: { accept: 'application/json' },
