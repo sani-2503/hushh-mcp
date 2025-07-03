@@ -462,7 +462,7 @@ app.post('/sse', async (req, res) => {
           if (!mail || !api_key) {
             return res.json(errorReply(-32602, 'mail and api_key are required'));
           }
-          const url = `https://hushh-api-53407187172.us-central1.run.app/sessiontoken?mail=${encodeURIComponent(mail)}&api_key=${encodeURIComponent(api_key)}`;
+          const url = `${HUSHH_BASE}/sessiontoken?mail=${encodeURIComponent(mail)}&api_key=${encodeURIComponent(api_key)}`;
           const sessionRes = await fetch(url, {
             method: 'POST',
             headers: { accept: 'application/json' },
