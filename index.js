@@ -487,7 +487,7 @@ app.post('/sse', async (req, res) => {
           if (!token) {
             return res.json(errorReply(-32602, 'token is required'));
           }
-          const url = `https://hushh-api-53407187172.us-central1.run.app/validatetoken?token=${encodeURIComponent(token)}`;
+          const url = `${HUSHH_BASE}/validatetoken?token=${encodeURIComponent(token)}`;
           const validateRes = await fetch(url, {
             method: 'POST',
             headers: { accept: 'application/json' },
