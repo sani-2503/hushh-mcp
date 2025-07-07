@@ -568,7 +568,7 @@ app.post('/sse', async (req, res) => {
           if (!phone_number || !access_token || !card_name || !expiry || bid_value === undefined) {
             return res.json(errorReply(-32602, 'All fields are required'));
           }
-          const url = 'https://hushh-api-53407187172.us-central1.run.app/api/v1/request-consent';
+          const url = ;
           const body = JSON.stringify({ phone_number, access_token, card_name, expiry, bid_value });
           const consentRes = await fetch(url, {
             method: 'POST',
