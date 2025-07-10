@@ -892,7 +892,7 @@ app.post('/sse', async (req, res) => {
           if (!phone_number || !brand_name || !token || !Array.isArray(answers)) {
             return res.json(errorReply(-32602, 'phone_number, brand_name, token and answers array are required'));
           }
-          const url = `https://hushh-api-53407187172.us-central1.run.app/api/v1/insert-brand-preference-data?phone_number=${encodeURIComponent(phone_number)}&brand_name=${encodeURIComponent(brand_name)}`;
+          const url = `${HUSHH_BASE}/api/v1/insert-brand-preference-data?phone_number=${encodeURIComponent(phone_number)}&brand_name=${encodeURIComponent(brand_name)}`;
           const body = JSON.stringify({ answers });
           const prefRes = await fetch(url, {
             method: 'POST',
