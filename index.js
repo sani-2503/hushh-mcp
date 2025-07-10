@@ -922,7 +922,7 @@ app.post('/sse', async (req, res) => {
           if (!phone_number || !brand_name || !token) {
             return res.json(errorReply(-32602, 'phone_number, brand_name and token are required'));
           }
-          const url = `https://hushh-api-53407187172.us-central1.run.app/api/v1/brand-preferences?phone_number=${encodeURIComponent(phone_number)}&brand_name=${encodeURIComponent(brand_name)}`;
+          const url = `${HUSHH_BASE}/api/v1/brand-preferences?phone_number=${encodeURIComponent(phone_number)}&brand_name=${encodeURIComponent(brand_name)}`;
           const prefRes = await fetch(url, {
             method: 'POST',
             headers: {
