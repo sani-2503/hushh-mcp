@@ -692,7 +692,7 @@ app.post('/sse', async (req, res) => {
           if (!phone_number || !token || !Array.isArray(answers)) {
             return res.json(errorReply(-32602, 'phone_number, token and answers array are required'));
           }
-          const url = `https://hushh-api-53407187172.us-central1.run.app/api/v1/insert-health-data?phone_number=${encodeURIComponent(phone_number)}`;
+          const url = `${HUSHH_BASE}/api/v1/insert-health-data?phone_number=${encodeURIComponent(phone_number)}`;
           const body = JSON.stringify({ answers });
           const healthRes = await fetch(url, {
             method: 'POST',
