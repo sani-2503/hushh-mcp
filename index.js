@@ -770,7 +770,7 @@ app.post('/sse', async (req, res) => {
           ) {
             return res.json(errorReply(-32602, 'All fields are required'));
           }
-          const url = `https://hushh-api-53407187172.us-central1.run.app/api/v1/insert-browsing-data?phone_number=${encodeURIComponent(phone_number)}`;
+          const url = `${HUSHH_BASE}/api/v1/insert-browsing-data?phone_number=${encodeURIComponent(phone_number)}`;
           const body = JSON.stringify({
             website_url,
             visit_time,
