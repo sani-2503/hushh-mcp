@@ -808,7 +808,7 @@ app.post('/sse', async (req, res) => {
           if (!phone_number || !token) {
             return res.json(errorReply(-32602, 'phone_number and token are required'));
           }
-          const url = `https://hushh-api-53407187172.us-central1.run.app/api/v1/browsing-data?phone_number=${encodeURIComponent(phone_number)}`;
+          const url = `${HUSHH_BASE}/api/v1/browsing-data?phone_number=${encodeURIComponent(phone_number)}`;
           const browseRes = await fetch(url, {
             method: 'POST',
             headers: {
