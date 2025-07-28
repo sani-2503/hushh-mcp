@@ -1,1 +1,2 @@
 # hushh-mcp
+# hushh-mcp
